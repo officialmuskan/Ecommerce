@@ -7,7 +7,11 @@ app.use(cp())
 const errorMiddleware = require("./middleware/error");
 const products = require("./routes/productRoute")
 const users = require("./routes/userRouter")
+const order = require("./routes/orderRoutes")
+const payment = require("./routes/paymentRoute")
 app.use('/api/v1', products);
 app.use('/api/v1', users);
+app.use('/api/v1', order);
+app.use('/api/v1', payment);
 app.use(errorMiddleware)
 module.exports=app
