@@ -31,7 +31,7 @@ const Useroptions = ({ user }) => {
   return (
     <>
       <IconButton onClick={handleMenuOpen} sx={{ p: 0 }}>
-        <Avatar alt={user.name} src="/assets/image.png" sx={{width:30, height:28}} />
+        <Avatar alt={user.name} src="/assets/image.png" sx={{width:30, height:28, bgcolor:'#F9AAAD'}} />
       </IconButton>
       <Menu sx={{m:0}}
         anchorEl={anchorEl}

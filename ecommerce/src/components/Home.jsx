@@ -91,7 +91,7 @@ const Home = (props) => {
                 src={Img2}
                 alt="Lake reflection"
                 className="w-full sm:h-44 h-26 object-cover"
-              />a
+              />
             </div>
           </div>
         </div>

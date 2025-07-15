@@ -26,8 +26,8 @@ const navigate = useNavigate()
     }
   return (
     <>
-    <div className='bg-gray-900'>
-      <form className={`${props.mode==='dark'?'bg-gray-900 text-white':'bg-gray'} shadow-md px-8 flex justify-end py-4`} onSubmit={handleSubmit}>
+    <div className='bg-gray-900 relative'>
+      <form className={`${props.mode==='dark'?'bg-gray-900 text-white':'bg-gray'} absolute right-0 top-10 shadow-md px-8 flex justify-end py-4`} onSubmit={handleSubmit}>
     <Paper
       
       sx={{ p: '2px 4px',position:'sticky', border:'2px solid grey', top:80,  display: 'flex', alignItems: 'center', width: 400, backgroundColor: 'transparent'}}

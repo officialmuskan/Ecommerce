@@ -18,7 +18,7 @@ const Header = (props) => {
   ];
 
   return (
-    <nav className={`${props.mode==='dark'?'bg-gray-900 text-white':'bg-white'} shadow-md px-5 py-4 flex items-center justify-evenly relative`}>
+    <nav className={`${props.mode==='dark'?'bg-gray-900 text-white':'bg-white'} shadow-md px-4 sm:px-0 py-4 flex items-center justify-around relative`}>
       {/* Logo */}
       <div className="">
         {/* <img src={logo} alt="Logo" className="w-6 h-6" /> */}

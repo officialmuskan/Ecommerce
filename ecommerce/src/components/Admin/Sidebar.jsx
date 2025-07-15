@@ -23,31 +23,30 @@ const Sidebar = (props) => {
   };
 
   return (
-    <div className={`${props.mode==='dark'?'bg-gray-900 text-white':'bg-white'}   sidebar bg-gray-100 flex flex-col p-6`}>
+    <div className={`${props.mode==='dark'?'bg-gray-900 text-white':'bg-white'}   sidebar bg-red-100 flex flex-col p-6`}>
       {/* <Link to="/">
         <img src={logo} alt="Ecommerce" />
       </Link> */}
       
-      <Link to="/admin/dashboard" className="p-6">
-        <p>
+      <Link to="/admin/dashboard" className="m-5 ">
+        <p className="hover:bg-zinc-100 p-1 ml-2">
           <DashboardIcon /> Dashboard
         </p>
       </Link>
 
-      <SimpleTreeView className="p-6"
+      <SimpleTreeView className="m-5"
         expandedItems={expandedItems}
         onExpandedItemsChange={handleExpandedItemsChange}
         slots={{
-          expandIcon: ChevronRightIcon,
+          expandIcon: ExpandMoreIcon,
           collapseIcon: ExpandMoreIcon,
         }}
       >
-        <TreeItem className="p-6"
+        <TreeItem className="m-6"
           itemId="products" 
           label={
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <InventoryIcon />
-              Products
+            <div className="flex gap-1" >
+              <InventoryIcon />Products
             </div>
           }
         >
@@ -76,23 +75,21 @@ const Sidebar = (props) => {
         </TreeItem>
       </SimpleTreeView>
 
-      <Link to="/admin/orders" className="p-6">
-        <p>
-          <ListAltIcon />
-          Orders
+      <Link to="/admin/orders" className="mx-5 my-4">
+        <p className="hover:bg-zinc-100 p-1 ml-2">
+          <ListAltIcon /> Orders
         </p>
       </Link>
 
-      <Link to="/admin/users" className="p-6">
-        <p>
+      <Link to="/admin/users" className="mx-5">
+        <p className="hover:bg-zinc-100 p-1 ml-2">
           <PeopleIcon /> Users
         </p>
       </Link>
 
-      <Link to="/admin/reviews" className="p-6">
-        <p>
-          <RateReviewIcon />
-          Reviews
+      <Link to="/admin/reviews" className="mx-5 my-4">
+        <p className="hover:bg-zinc-100 p-1 ml-2">
+          <RateReviewIcon /> Reviews
         </p>
       </Link>
     </div>

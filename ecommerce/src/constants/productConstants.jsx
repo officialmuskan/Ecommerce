@@ -1,3 +1,9 @@
+import {GiClothes} from 'react-icons/gi';
+import { PiSneaker } from "react-icons/pi";
+import { CiHeadphones } from "react-icons/ci";
+import { CiLaptop } from "react-icons/ci";
+import { IoIosPhonePortrait } from "react-icons/io";
+
 export const ALL_PRODUCT_REQUEST = "ALL_PRODUCT_REQUEST"
 export const ALL_PRODUCT_SUCCESS = "ALL_PRODUCT_SUCCESS"
 export const ALL_PRODUCT_FAIL = "ALL_PRODUCT_FAIL"
