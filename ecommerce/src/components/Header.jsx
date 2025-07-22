@@ -11,18 +11,19 @@ const Header = (props) => {
   console.log(user)
   const navItems = [
     'Home',
-    'Product',
+    'Products',
     'Contact',
     'Categories'
     
   ];
+  const navlins = ['', 'product', 'contact', 'categories']
 
   return (
     <nav className={`${props.mode==='dark'?'bg-gray-900 text-white':'bg-white'} shadow-md px-4 sm:px-0 py-4 flex items-center justify-around relative`}>
       {/* Logo */}
       <div className="">
         {/* <img src={logo} alt="Logo" className="w-6 h-6" /> */}
-        <h1 className="font-bold text-xl text-indigo-500">FanCart</h1>
+        <h1 className="font-bold text-xl text-indigo-500">Shopfinity</h1>
       </div>
 
       {/* Navigation Links */}
@@ -69,25 +70,26 @@ const Header = (props) => {
       {/* Sidebar */}
       {sidebarOpen && (
         <div className={`${props.mode==='dark'?'bg-gray-800 text-white':'bg-white'} fixed top-0 left-0 w-3/4 h-full shadow-lg z-50 p-6 flex flex-col gap-6`}>
-          <div className="flex justify-between items-center mb-4">
-            <span className="text-lg font-bold">Menu</span>
+          <div className="flex justify-between items-center">
+            <span className="text-lg font-bold"></span>
             <FaTimes
               className="text-xl cursor-pointer"
               onClick={() => setSidebarOpen(false)}
             />
           </div>
-          {navItems.map((item, index) => (
-            <div
+          {navlins.map((item, index) => (
+            <Link to={item.toLowerCase()}
               key={index}
               className={`hover:text-gray-600 cursor-pointer `}
             >
-              {item}
-            </div>
+              {item === '' ?'HOME':item.toUpperCase()}
+              
+            </Link>
           ))}
           <hr />
           <div className={`${props.mode==='dark'?'bg-gray-800 text-white':'bg-white'} flex gap-4 text-gray-700 text-lg`}>
-          <Link to="/search">
-          <FaSearch className="cursor-pointer hover:text-gray-600" /></Link>
+          {/* <Link to="/search">
+          <FaSearch className="cursor-pointer hover:text-gray-600" /></Link> */}
       <FaShoppingCart className="cursor-pointer hover:text-gray-600" />
         <FaUser className="cursor-pointer hover:text-gray-600" />
         {props.mode === 'light'?(

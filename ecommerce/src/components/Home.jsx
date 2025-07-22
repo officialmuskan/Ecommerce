@@ -54,7 +54,7 @@ const Home = (props) => {
         
         {/* <h1 className={`${props.mode==='dark'?'bg-gray-900':'bg-white'}  px-2 font-semibold text-center text-[5.5vmax] tracking-widest`}> PRODUCTS</h1> */}
         <div className='flex flex-col justify-around items-start  w-[100%]'>
-            <p className={`${props.mode==='dark'?'bg-gray-900 text-gray-200':'bg-white text-gray-400'} sm:text-[1.5vmax]  text-[2vmax] pb-5  pr-5`}>Welcome to FanCart.  Get products at amazing deals!</p>
+            <p className={`${props.mode==='dark'?'bg-gray-900 text-gray-200':'bg-white text-gray-400'} sm:text-[1.5vmax]  text-[2vmax] pb-5  pr-5`}>Welcome to Shopfinity.  Get products at amazing deals!</p>
         
         <a href="#container">
         <button className={`${props.mode==='dark'?'bg-gray-900':'bg-white'} text-indigo-500  block  sm:pb-5 sm:pr-5 font-bold py-1 flex gap-2 justify-center items-center`}> <div className='flex justify-center items-center rounded-full sm:w-7 sm:h-7 h-5 w-5 font-bold border-4 text-center'><FaArrowDown className='text-center'  size={12}/></div> <div className=' sm:text-[1.3vmax] hover:text-indigo-900 text-[2.4vmax]'>Explore Now</div></button></a>
@@ -123,11 +123,11 @@ const Home = (props) => {
 
     
     <div id='container' className ={`${props.mode==='dark'?'bg-gray-900 text-white':'bg-white'}`}>
-    <h1 className='text-left mx-[16vw] text-[3vmax] pt-10 font-bold'>Featured Products</h1>
+    <h1 className='text-center text-zinc-800  mx-auto text-2xl sm:text-[3vmax] pt-10 font-bold'>Featured Products</h1>
     
-    {loading?(<Loader mode={props.mode}/>):(<div className=" flex py-2 mx-auto w-[80vw] flex-wrap justify-center" >
+    {loading?(<Loader mode={props.mode}/>):(<div className=" flex py-2  w-full flex-wrap justify-center" >
         
-        {products && products.map(product=><Product key={product._id} product={product}></Product>).slice(0,4)}
+        {products && products.map(product=><Product key={product._id} product={product}></Product>).slice(0,5)}
 
     </div>)}
     

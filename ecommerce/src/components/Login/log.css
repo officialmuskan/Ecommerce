@@ -153,8 +153,7 @@ form {
 }
 
 .overlay {
-	background: linear-gradient(to left, rgba(168, 16, 214, 0.909), rgba(76, 0, 130, 0.548));
-	
+	background: radial-gradient(#615fff, #4c4ac2);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;

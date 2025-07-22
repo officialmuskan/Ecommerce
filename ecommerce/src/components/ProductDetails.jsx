@@ -105,7 +105,7 @@ const ProductDetails = (props) => {
         <Slider {...settings}>
         {product.images && product.images.map((item, i)=>(
                 
-                <img src={logo} key={i} className='CaraouselImage h-[50vmax] sm:h-[30vmax]' alt="" />
+                <img src={product.images[0].url} key={i} className='CaraouselImage h-[50vmax] sm:h-[30vmax]' alt="" />
             
             
             ))}
@@ -122,7 +122,7 @@ const ProductDetails = (props) => {
     
     <div className='justify-evenly sm:items-start items-center sm:p-10' style={{width:'100%'}}>
   <div className="detailsBlock-1 my-5">
-    <h2 className='sm:text-3xl text-2xl font-bold'>{product.name}</h2>
+    <p className='sm:text-3xl text-2xl font-bold text-left text-zinc-800'>{product.name}</p>
     <p>Product # {product._id}</p>
     <hr className='text-zinc-100'/>
   </div>

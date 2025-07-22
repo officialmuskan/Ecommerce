@@ -2,7 +2,11 @@ const express  = require("express");
 const dotenv = require("dotenv")
 const app = require("./app")
 const connect = require("./config/database")
-dotenv.config()
+
+if(process.env.NODE_ENV !== "PRODUCTION"){
+    dotenv.config()
+}
+
 
 process.on("uncaughtException", err=>{
     console.log(`${err.message}`)

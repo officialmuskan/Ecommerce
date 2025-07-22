@@ -83,7 +83,7 @@ export default function App() {
     
     <Route path="/" element={<Home toggleStyle={toggleStyle} mode={mode} />}/>
     <Route path="/product/:id" element={<ProductDetails toggleStyle={toggleStyle} mode={mode} />}/>
-    <Route path="/product" element={<AllProduct toggleStyle={toggleStyle} mode={mode} />}/>
+    <Route path="/products" element={<AllProduct toggleStyle={toggleStyle} mode={mode} />}/>
     <Route path="/search" element={<Search toggleStyle={toggleStyle} mode={mode} />}/>
     <Route path="/products/:keyword" element={<AllProduct toggleStyle={toggleStyle} mode={mode} />}/>
     <Route path="/login" element={<Login toggleStyle={toggleStyle} mode={mode} />}/>
@@ -133,7 +133,7 @@ export default function App() {
 />
   <Route path="/password/forgot" element={<ForgotPassword toggleStyle={toggleStyle} mode={mode} />}/>
     <Route path="/reset/:token" element={<ResetPassword toggleStyle={toggleStyle} mode={mode} />}/>
-    <Route path="/cart" element={<Cart toggleStyle={toggleStyle} mode={mode} />}/>
+    <Route path="/cart" element={isAuthenticated ?(<Cart toggleStyle={toggleStyle} mode={mode} />):(<Navigate to='/login' />)}/>
     <Route
         path="/shipping"
         element={
