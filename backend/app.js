@@ -14,9 +14,9 @@ app.use('/api/v1', products);
 app.use('/api/v1', users);
 app.use('/api/v1', order);
 app.use('/api/v1', payment);
-app.use(express.static(path.join(__dirname, "../ecommerce/dist")))
+app.use(express.static(path.join(__dirname, "./ecommerce/dist")))
 app.get("*", (req, res)=>{
-    res.sendFile(path.resolve(__dirname, "../ecommerce/dist/index.html"))
+    res.sendFile(path.resolve(__dirname, "./ecommerce/dist/index.html"))
 })
 app.use(errorMiddleware)
 module.exports=app
