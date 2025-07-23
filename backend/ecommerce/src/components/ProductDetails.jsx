@@ -2,7 +2,7 @@ import React, { useEffect, useSyncExternalStore,useState } from 'react'
 import {Card, Box, Rating, Dialog, DialogActions, DialogContent, DialogTitle, Button} from '@mui/material'
 import { useDispatch, useSelector } from 'react-redux'
 import { getProductDetails, ClearError, newReview } from '../actions/productActions'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import logo from "../assets/image.png"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
@@ -22,6 +22,7 @@ addItemstoCart
 
   
 const ProductDetails = (props) => {
+  const nav = useNavigate()
   const {id} = useParams()
     const[status, setStatus] = useState(false);
     const [type, setType] = useState("success");
@@ -71,7 +72,8 @@ const ProductDetails = (props) => {
             dispatch(ClearError())
         }
          if (reviewError) {
-      alert(reviewError);
+          nav("/login")
+          dispatch(ClearError());
       
     }
 
@@ -80,7 +82,7 @@ const ProductDetails = (props) => {
       dispatch({ type: NEW_REVIEW_RESET });
     }
         dispatch(getProductDetails(id))
-    }, [dispatch, id, success, reviewError, error])
+    }, [dispatch, id, success, reviewError,alert, error])
     const settings = {
         dots: true,
         infinite: true,
