@@ -15,7 +15,7 @@ const Product = ({product}) => {
             <ReactStars edit={false} value={product.ratings}/>
             <div className='mx-0.5 text-sm'>{product.numofreviews} reviews</div>
         </div>
-        <span className='sm:mx-1 sm:text-lg text-md'>{product.price}</span>
+        <span className='sm:mx-1 sm:text-lg text-md'>Rs. {product.price}</span>
     
     </Link>
 
