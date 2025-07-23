@@ -12,11 +12,6 @@ import ResponsivePagination from 'react-responsive-pagination';
 
 const categories = [
   "Laptop",
-  "Footwear",
-  "Bottom",
-  "Tops",
-  "Attire",
-  "Camera",
   "SmartPhones",
 ];
 
