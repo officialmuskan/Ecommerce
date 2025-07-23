@@ -39,7 +39,6 @@
     "reactjs-alert": "^2.5.2",
     "redux": "^5.0.1",
     "redux-thunk": "^3.1.0",
-    "responsive-navbar-react": "^1.2.1",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
