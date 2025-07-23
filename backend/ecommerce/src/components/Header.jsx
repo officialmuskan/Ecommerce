@@ -21,10 +21,10 @@ const Header = (props) => {
   return (
     <nav className={`${props.mode==='dark'?'bg-gray-900 text-white':'bg-white'} shadow-md px-4 sm:px-0 py-4 flex items-center justify-around relative`}>
       {/* Logo */}
-      <div className="">
+      <Link to="" className="">
         {/* <img src={logo} alt="Logo" className="w-6 h-6" /> */}
         <h1 className="font-bold text-xl text-indigo-500">Shopfinity</h1>
-      </div>
+      </Link>
 
       {/* Navigation Links */}
       <ul className="hidden md:flex items-center gap-10 text-md font-medium">
