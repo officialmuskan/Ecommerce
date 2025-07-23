@@ -139,7 +139,7 @@ const ProductDetails = (props) => {
 
   <div className="detailsBlock-3">
     
-    <h1 className='text-2xl text-semibold'>{`₹${product.price}`}</h1>
+    <h1 className='text-2xl text-semibold'>{`Rs. ${product.price}`}</h1>
 
     <div className="detailsBlock-3-1 flex items-center my-5">
       <div className="detailsBlock-3-1-1">
