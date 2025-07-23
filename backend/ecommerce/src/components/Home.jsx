@@ -122,8 +122,8 @@ const Home = (props) => {
     
 
     
-    <div id='container' className ={`${props.mode==='dark'?'bg-gray-900 text-white':'bg-white'}`}>
-    <h1 className='text-center text-zinc-800  mx-auto text-2xl sm:text-[3vmax] pt-10 font-bold'>Featured Products</h1>
+    <div id='container' className ={`${props.mode==='dark'?'bg-gray-900 text-white':'bg-white text-zinc-800 '}`}>
+    <h1 className='text-center   mx-auto text-2xl sm:text-[3vmax] pt-10 font-bold'>Featured Products</h1>
     
     {loading?(<Loader mode={props.mode}/>):(<div className=" flex py-2  w-full flex-wrap justify-center" >
         
